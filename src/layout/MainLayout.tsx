@@ -1,10 +1,12 @@
 import React from 'react'
 import { Outlet } from "react-router"
+import Navbar from "../components/Navbar"
 
 const MainLayout = () => {
     return (
-        <main className="h-screen overflow-x-hidden">
+        <main className="relative h-screen overflow-x-hidden">
             <Outlet />
+            <Navbar />
         </main>
     )
 }

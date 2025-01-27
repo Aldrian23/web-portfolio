@@ -120,8 +120,14 @@ a:active, a:link, a:visited, a:hover {
 .bg-main {
   background-color: #3b82f6;
 }
-.bg-white {
+.bg-dark {
+  background-color: #020817;
+}
+.bg-light {
   background-color: #fafafa;
+}
+.bg-gray {
+  background-color: #565a64;
 }
 
 .font-normal {
@@ -139,6 +145,12 @@ a:active, a:link, a:visited, a:hover {
 
 .text-main {
   color: #3b82f6;
+}
+.text-dark {
+  color: #020817;
+}
+.text-gray {
+  color: #565a64;
 }
 .text-white {
   color: #fafafa;
@@ -313,6 +325,14 @@ a:active, a:link, a:visited, a:hover {
   height: 3.25rem;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .btn {
   font-weight: 700;
   font-family: "DM Serif Text", serif;
@@ -332,6 +352,30 @@ a:active, a:link, a:visited, a:hover {
   padding-right: auto;
   width: 100%;
 }
+.navbar {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 765px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  background-color: #020817;
+  border: 2px solid #3b82f6;
+}
+.navbar-link {
+  font-weight: 500;
+  font-family: "DM Serif Text", serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fafafa !important;
+}
+.navbar-link.active {
+  color: #3b82f6 !important;
+  text-decoration: underline;
+}
+
 .image-container {
   width: 300px;
   height: 300px;
