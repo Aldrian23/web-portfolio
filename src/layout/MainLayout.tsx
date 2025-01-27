@@ -1,9 +1,10 @@
 import React from 'react'
+import { Outlet } from "react-router"
 
-const MainLayout = ({ children }) => {
+const MainLayout = () => {
     return (
-        <main className="min-h-screen overflow-x-hidden">
-            {children}
+        <main className="h-screen overflow-x-hidden">
+            <Outlet />
         </main>
     )
 }

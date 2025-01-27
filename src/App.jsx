@@ -1,11 +1,7 @@
-import MainLayout from "./layout/MainLayout";
+import MainRouter from "./routes/MainRouter";
 
 const App = () => {
-  return (
-    <MainLayout>
-      <h1 className="text-center text-main">Main App</h1>
-    </MainLayout>
-  );
+  return <MainRouter />;
 };
 
 export default App;
