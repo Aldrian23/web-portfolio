@@ -19,9 +19,30 @@ p {
   font-weight: normal;
 }
 
-main {
+.h-screen {
+  height: 100vh;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.min-h-screen {
   min-height: 100vh;
+}
+
+.overflow {
   overflow: hidden;
+}
+.overflow-x {
+  overflow-x: hidden;
+}
+.overflow-y {
+  overflow-y: hidden;
 }
 
 .text-main {
@@ -98,4 +119,20 @@ main {
 }
 .align-baseline {
   align-items: baseline;
+}
+
+.rounded {
+  border-radius: 0.5rem;
+}
+.rounded-sm {
+  border-radius: 0.25rem;
+}
+.rounded-lg {
+  border-radius: 0.75rem;
+}
+.rounded-xl {
+  border-radius: 1rem;
+}
+.rounded-full {
+  border-radius: 100%;
 }/*# sourceMappingURL=index.css.map */
