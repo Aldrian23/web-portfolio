@@ -1,8 +1,9 @@
+import { Link } from "react-router";
+import { CONTENT } from "../data/constant/content.const";
+
 import { RiFacebookFill, RiGithubFill, RiLinkedinFill } from "@remixicon/react";
 
 import photo from "/photo.jpg";
-import { Link } from "react-router";
-import { CONTENT } from "../data/constant/content.const";
 
 const HomePage = () => {
   return (
