@@ -7,14 +7,14 @@ import MainLayout from "@/components/layout/MainLayout"
 import About from "@/pages/About"
 import Feedbacks from "@/pages/Feedbacks"
 import Contact from "@/pages/Contact"
-import Projects from "@/pages/Projects"
+import Education from "@/pages/Education"
 
 const MainRouter: FC = () => {
     return (
         <Routes>
             <Route element={<MainLayout />}>
                 <Route index element={<About />} />
-                <Route path="projects" element={<Projects />} />
+                <Route path="education" element={<Education />} />
                 <Route path="feedbacks" element={<Feedbacks />} />
                 <Route path="contact" element={<Contact />} />
             </Route>

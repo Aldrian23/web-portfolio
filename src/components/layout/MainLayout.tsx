@@ -18,8 +18,8 @@ const MainLayout: FC = () => {
                         <Link to="/" className={"h-full px-4 cursor-pointer inline-flex items-center transition-colors duration-500" + (pathname === "/" ? " text-amber-400 hover:text-amber-400/60" : " text-white hover:text-white/60")}>
                             About
                         </Link>
-                        <Link to="/projects" className={"h-full px-4 cursor-pointer inline-flex items-center transition-colors duration-500" + (pathname === "/projects" ? " text-amber-400 hover:text-amber-400/60" : " text-white hover:text-white/60")}>
-                            Projects
+                        <Link to="/education" className={"h-full px-4 cursor-pointer inline-flex items-center transition-colors duration-500" + (pathname === "/projects" ? " text-amber-400 hover:text-amber-400/60" : " text-white hover:text-white/60")}>
+                            Education
                         </Link>
                         <Link to="/feedbacks" className={"h-full px-4 cursor-pointer inline-flex items-center transition-colors duration-500" + (pathname === "/feedbacks" ? " text-amber-400 hover:text-amber-400/60" : " text-white hover:text-white/60")}>
                             Feedbacks
