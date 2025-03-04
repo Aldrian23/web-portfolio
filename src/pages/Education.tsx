@@ -14,7 +14,7 @@ const Education: FC = () => {
           ))}
         </div>
       </div>
-      <div className="mt-4 flex flex-col space-y-6 pb-6">
+      <div className="mt-0 flex flex-col space-y-6 pb-6">
         {EDUCATION.list.map((obj) => (
           <div key={obj.level}>
             <h1 className="text-2xl font-semibold tracking-wide mb-2">{obj.school}</h1>
