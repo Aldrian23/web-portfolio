@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
 import { FEEDBACKS } from "@/data/constants/feedbacks.const"
+import moment from "moment"
 
 const Feedbacks: FC = () => {
   return (
@@ -13,6 +14,20 @@ const Feedbacks: FC = () => {
             <p key={value}>{value}</p>
           ))}
         </div>
+      </div>
+
+      <div className="mt-0 flex flex-col space-y-6 pb-6">
+        {FEEDBACKS.list.map((obj) => (
+          <div key={obj.name}>
+            <h1 className="text-2xl font-semibold tracking-wide mb-2">{obj.name}</h1>
+
+            <div className="flex gap-2">
+              <span className="text-sm py-1 bg-neutral-700 rounded-md px-4">🕛 {moment(obj.createdAt).fromNow()}</span>
+            </div>
+
+            <p className="mt-2">{obj.value}</p>
+          </div>
+        ))}
       </div>
     </div>
   )

@@ -4,6 +4,8 @@ import GetIcon from "@/components/common/GetIcon"
 import { INFO } from "@/data/constants/info.const"
 
 const Sidebar: FC = () => {
+    const shows = ['phone', 'location'] // You can add more to show like email, role, location, etc.
+
     return (
         <div className="w-full max-w-full md:max-w-[300px] bg-neutral-800 border border-neutral-600 rounded-2xl py-7 px-5 md:px-8 flex flex-col items-center justify-start">
             <img src={INFO.image} alt={INFO.name} className="size-60 rounded-xl" />
@@ -16,7 +18,7 @@ const Sidebar: FC = () => {
             <hr className="hidden md:block w-full h-[2px] bg-gradient-to-r from-amber-400 to-amber-500 border-none rounded-full my-6" />
 
             <div className="w-full text-white flex flex-col gap-5">
-                {['email', 'phone', 'location'].map((value) => (
+                {shows.map((value) => (
                     <div key={value} className="w-full flex gap-2 md:gap-4 items-center justify-start">
                         <div className="size-10 bg-neutral-700 rounded-md grid place-items-center">
                             <GetIcon icon={value} className="text-amber-400" />
