@@ -6,13 +6,13 @@ export const FEEDBACKS = {
     ],
     list: [
         {
-            name: "John Doe",
+            name: "Jessica Santos",
             relation: "Classmate",
             createdAt: moment("2025-02-12 14:42:12").toDate(),
             value: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, nesciunt! Porro excepturi fugit dolore rem sit ullam aspernatur, cupiditate laborum similique consequuntur maiores culpa nostrum rerum! Voluptatibus facere totam, maiores sit deserunt, obcaecati molestias quisquam, accusamus earum ipsum similique veniam eum ut? Ea beatae sint voluptas voluptate in ipsum deserunt?"
         },
         {
-            name: "Mark Smith",
+            name: "Rhei Marc Perez",
             relation: "Classmate",
             createdAt: moment("2025-01-14 18:13:59").toDate(),
             value: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, nesciunt! Porro excepturi fugit dolore rem sit ullam aspernatur, cupiditate laborum similique consequuntur maiores culpa nostrum rerum! Voluptatibus facere totam, maiores sit deserunt, obcaecati molestias quisquam, accusamus earum ipsum similique veniam eum ut? Ea beatae sint voluptas voluptate in ipsum deserunt?"

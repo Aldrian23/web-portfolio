@@ -21,9 +21,7 @@ const Feedbacks: FC = () => {
           <div key={obj.name}>
             <h1 className="text-2xl font-semibold tracking-wide mb-2">{obj.name}</h1>
 
-            <div className="flex gap-2">
-              <span className="text-sm py-1 bg-neutral-700 rounded-md px-4">🕛 {moment(obj.createdAt).fromNow()}</span>
-            </div>
+            <span className="text-sm py-1 bg-neutral-700 rounded-md px-4">🕛 {moment(obj.createdAt).fromNow()}</span>
 
             <p className="mt-2">{obj.value}</p>
           </div>

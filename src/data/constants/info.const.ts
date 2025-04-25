@@ -13,4 +13,10 @@ export const INFO = {
     interests: ["Programming", "Music", "Editing", "Eating", "Movies", "Video Games"],
     stacks: ["HTML", "CSS", "JavaScript", "ReactJS", "TypeScript", "Git", "GitHub", "TailwindCSS", "Vite"],
     softwares: ["Visual Studio Code", "GitHub Desktop", "Photoshop", "Canva"],
+    facebook: "#",
+    instagram: "#",
+    tiktok: "#",
+    youtube: "#",
+    linkedin: "#",
+    github: "#"
 }
