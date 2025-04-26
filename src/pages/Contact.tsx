@@ -21,7 +21,7 @@ const Contact: FC = () => {
       <div className="my-5 space-y-4">
         <p className="text-center">You can also contact me through</p>
 
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-6">
           <a href={INFO.github} target="_blank" rel="noopener noreferrer">
             <RiGithubFill className="h-8 w-8" />
           </a>
@@ -31,7 +31,7 @@ const Contact: FC = () => {
           <a href={INFO.facebook} target="_blank" rel="noopener noreferrer">
             <RiFacebookCircleFill className="h-8 w-8" />
           </a>
-          <a href={INFO.instagram} target="_blank" rel="noopener noreferrer">
+          {/* <a href={INFO.instagram} target="_blank" rel="noopener noreferrer">
             <RiInstagramFill className="h-8 w-8" />
           </a>
           <a href={INFO.tiktok} target="_blank" rel="noopener noreferrer">
@@ -39,7 +39,7 @@ const Contact: FC = () => {
           </a>
           <a href={INFO.youtube} target="_blank" rel="noopener noreferrer">
             <RiYoutubeFill className="h-8 w-8" />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

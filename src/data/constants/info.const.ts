@@ -13,10 +13,10 @@ export const INFO = {
     interests: ["Programming", "Music", "Editing", "Eating", "Movies", "Video Games"],
     stacks: ["HTML", "CSS", "JavaScript", "ReactJS", "TypeScript", "Git", "GitHub", "TailwindCSS", "Vite"],
     softwares: ["Visual Studio Code", "GitHub Desktop", "Photoshop", "Canva"],
-    facebook: "#",
+    facebook: "https://www.facebook.com/Aldrian.Nieto",
     instagram: "#",
     tiktok: "#",
     youtube: "#",
-    linkedin: "#",
-    github: "#"
+    linkedin: "https://www.linkedin.com/in/aldrian-samson-634834360",
+    github: "https://github.com/Aldrian23"
 }
