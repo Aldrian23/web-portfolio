@@ -1,5 +1,5 @@
 import { INFO } from "@/data/constants/info.const"
-import { RiFacebookCircleFill, RiGithubFill, RiInstagramFill, RiLinkedinFill, RiTiktokFill, RiYoutubeFill } from "@remixicon/react"
+import { RiFacebookCircleFill, RiGithubFill, RiLinkedinFill } from "@remixicon/react"
 import { FC } from 'react'
 
 const Contact: FC = () => {
