@@ -23,6 +23,9 @@ const MainLayout: FC = () => {
                         <Link to="/feedbacks" className={`px-2 md:px-4 py-1 cursor-pointer inline-flex items-center transition-colors duration-500 font-title ${pathname === "/feedbacks" ? "text-amber-400 hover:text-amber-400/60" : "text-white hover:text-white/60"}`}>
                             Feedbacks
                         </Link>
+                        <Link to="/blogs" className={`px-2 md:px-4 py-1 cursor-pointer inline-flex items-center transition-colors duration-500 font-title ${pathname.startsWith("/blogs") ? "text-amber-400 hover:text-amber-400/60" : "text-white hover:text-white/60"}`}>
+                            Blogs
+                        </Link>
                         <Link to="/contact" className={`px-2 md:px-4 py-1 cursor-pointer inline-flex items-center transition-colors duration-500 font-title ${pathname === "/contact" ? "text-amber-400 hover:text-amber-400/60" : "text-white hover:text-white/60"}`}>
                             Contact
                         </Link>
