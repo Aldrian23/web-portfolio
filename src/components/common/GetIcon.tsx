@@ -1,4 +1,5 @@
 import { Briefcase, Code2, Home, Mail, Navigation, Phone } from "lucide-react";
+import { RiFacebookCircleFill, RiGithubFill, RiLinkedinFill } from "@remixicon/react";
 import { FC } from 'react';
 
 const GetIcon: FC<{ icon: string; className?: string }> = ({ icon, className }) => {
@@ -18,6 +19,12 @@ const GetIcon: FC<{ icon: string; className?: string }> = ({ icon, className }) 
         case "mail":
         case "mailbox":
             return <Mail className={className} />
+        case "facebook":
+            return <RiFacebookCircleFill className={className} />
+        case "github":
+            return <RiGithubFill className={className} />
+        case "linkedin":
+            return <RiLinkedinFill className={className} />
         default: {
             return <></>
         }
