@@ -1,0 +1,1 @@
+Developed a responsive website for a local business, utilizing HTML, CSS, and JavaScript to create a user-friendly interface and seamless user experience.
