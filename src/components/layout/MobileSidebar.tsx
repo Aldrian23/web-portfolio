@@ -21,10 +21,10 @@ const MobileSidebar: FC = () => {
             {/* Hamburger Button - Fixed at the top */}
             <button
                 onClick={toggleSidebar}
-                className="fixed top-4 right-4 z-50 w-10 h-10 bg-neutral-800 border border-neutral-600 rounded-md flex items-center justify-center shadow-lg"
+                className="flex fixed top-4 right-4 z-50 justify-center items-center w-10 h-10 rounded-md border shadow-lg bg-neutral-800 border-neutral-600"
                 aria-label="Toggle sidebar"
             >
-                <div className="w-6 h-6 flex flex-col justify-center items-center gap-1">
+                <div className="flex flex-col gap-1 justify-center items-center w-6 h-6">
                     <span className={`block w-5 h-0.5 bg-amber-400 transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
                     <span className={`block w-5 h-0.5 bg-amber-400 transition-all duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
                     <span className={`block w-5 h-0.5 bg-amber-400 transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
@@ -33,14 +33,14 @@ const MobileSidebar: FC = () => {
 
             {/* Dropdown Sidebar */}
             <div className={`fixed top-0 left-0 w-full bg-neutral-900/90 backdrop-blur-sm transition-all duration-500 z-40 ${isOpen ? 'h-auto opacity-100' : 'h-0 opacity-0 pointer-events-none'} overflow-hidden`}>
-                <div className="bg-neutral-800 border-b border-neutral-600 p-4 pt-16 pb-6">
+                <div className="p-4 pt-16 pb-6 border-b bg-neutral-800 border-neutral-600">
                     {/* Navigation Links */}
-                    <div className="w-full mb-6 py-2 bg-neutral-700/50 rounded-lg">
+                    <div className="py-2 mb-6 w-full rounded-lg bg-neutral-700/50">
                         <nav className="grid grid-cols-1 gap-1 px-2 py-1">
                             <Link
                                 to="/"
                                 onClick={closeSidebar}
-                                className={`px-4 py-2 rounded-md font-title font-medium text-sm flex items-center gap-3
+                                className={`px-4 py-2 rounded-md font-title font-medium text-sm
                                            ${pathname === "/" ? "bg-neutral-800 text-amber-400" : "text-white hover:bg-neutral-800/70"}`}
                             >
                                 About
@@ -48,52 +48,72 @@ const MobileSidebar: FC = () => {
                             <Link
                                 to="/education"
                                 onClick={closeSidebar}
-                                className={`px-4 py-2 rounded-md font-title font-medium text-sm flex items-center gap-3
+                                className={`px-4 py-2 rounded-md font-title font-medium text-sm
                                            ${pathname === "/education" ? "bg-neutral-800 text-amber-400" : "text-white hover:bg-neutral-800/70"}`}
                             >
-                                <GetIcon icon="education" className={pathname === "/education" ? "text-amber-400" : "text-white"} />
                                 Education
+                            </Link>
+                            <Link
+                                to="/experiences"
+                                onClick={closeSidebar}
+                                className={`px-4 py-2 rounded-md font-title font-medium text-sm
+                                           ${pathname === "/experiences" ? "bg-neutral-800 text-amber-400" : "text-white hover:bg-neutral-800/70"}`}
+                            >
+                                Experiences
+                            </Link>
+                            <Link
+                                to="/projects"
+                                onClick={closeSidebar}
+                                className={`px-4 py-2 rounded-md font-title font-medium text-sm
+                                           ${pathname.startsWith("/projects") ? "bg-neutral-800 text-amber-400" : "text-white hover:bg-neutral-800/70"}`}
+                            >
+                                Projects
+                            </Link>
+                            <Link
+                                to="/certifications"
+                                onClick={closeSidebar}
+                                className={`px-4 py-2 rounded-md font-title font-medium text-sm
+                                           ${pathname === "/certifications" ? "bg-neutral-800 text-amber-400" : "text-white hover:bg-neutral-800/70"}`}
+                            >
+                                Certifications
                             </Link>
                             <Link
                                 to="/feedbacks"
                                 onClick={closeSidebar}
-                                className={`px-4 py-2 rounded-md font-title font-medium text-sm flex items-center gap-3
+                                className={`px-4 py-2 rounded-md font-title font-medium text-sm
                                            ${pathname === "/feedbacks" ? "bg-neutral-800 text-amber-400" : "text-white hover:bg-neutral-800/70"}`}
                             >
-                                <GetIcon icon="feedback" className={pathname === "/feedbacks" ? "text-amber-400" : "text-white"} />
                                 Feedbacks
                             </Link>
                             <Link
                                 to="/blogs"
                                 onClick={closeSidebar}
-                                className={`px-4 py-2 rounded-md font-title font-medium text-sm flex items-center gap-3
+                                className={`px-4 py-2 rounded-md font-title font-medium text-sm
                                            ${pathname.startsWith("/blogs") ? "bg-neutral-800 text-amber-400" : "text-white hover:bg-neutral-800/70"}`}
                             >
-                                <GetIcon icon="blog" className={pathname.startsWith("/blogs") ? "text-amber-400" : "text-white"} />
                                 Blogs
                             </Link>
                             <Link
                                 to="/contact"
                                 onClick={closeSidebar}
-                                className={`px-4 py-2 rounded-md font-title font-medium text-sm flex items-center gap-3
+                                className={`px-4 py-2 rounded-md font-title font-medium text-sm
                                            ${pathname === "/contact" ? "bg-neutral-800 text-amber-400" : "text-white hover:bg-neutral-800/70"}`}
                             >
-                                <GetIcon icon="contact" className={pathname === "/contact" ? "text-amber-400" : "text-white"} />
                                 Contact
                             </Link>
                         </nav>
                     </div>
 
-                    <div className="flex flex-row items-center gap-4">
+                    <div className="flex flex-row gap-4 items-center">
                         {/* Profile Image */}
                         <img
                             src={INFO.image}
                             alt={INFO.name}
-                            className="w-16 h-16 rounded-xl object-cover border border-neutral-600"
+                            className="object-cover w-16 h-16 rounded-xl border border-neutral-600"
                         />
                         <div>
-                            <h1 className="text-lg font-bold font-title text-white">{INFO.name}</h1>
-                            <p className="text-xs py-1 px-2 bg-neutral-700 rounded-md font-body w-fit text-white">{INFO.role}</p>
+                            <h1 className="text-lg font-bold text-white font-title">{INFO.name}</h1>
+                            <p className="px-2 py-1 text-xs text-white rounded-md bg-neutral-700 font-body w-fit">{INFO.role}</p>
                         </div>
                     </div>
 
@@ -101,34 +121,34 @@ const MobileSidebar: FC = () => {
                     <div className="w-full h-[2px] bg-gradient-to-r from-amber-400 to-amber-500 rounded-full my-4"></div>
 
                     {/* Contact Information */}
-                    <div className="w-full text-white grid grid-cols-1 gap-3">
+                    <div className="grid grid-cols-1 gap-3 w-full text-white">
                         {shows.map((value) => (
-                            <div key={value} className="flex items-center gap-3">
+                            <div key={value} className="flex gap-3 items-center">
                                 <div className="min-w-[32px] w-8 h-8 bg-neutral-700 rounded-md grid place-items-center">
                                     <GetIcon icon={value} className="text-amber-400" />
                                 </div>
                                 <div className="overflow-hidden">
-                                    <h6 className="text-xs uppercase font-bold text-white/90 font-title truncate">{value}</h6>
-                                    <p className="text-xs font-body truncate">{INFO[value as keyof typeof INFO]}</p>
+                                    <h6 className="text-xs font-bold uppercase truncate text-white/90 font-title">{value}</h6>
+                                    <p className="text-xs truncate font-body">{INFO[value as keyof typeof INFO]}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
 
                     {/* Social Links */}
-                    <div className="w-full flex justify-center items-center gap-6 mt-4">
+                    <div className="flex gap-6 justify-center items-center mt-4 w-full">
                         {INFO.facebook && (
-                            <a href={INFO.facebook} target="_blank" rel="noopener noreferrer" className="text-white hover:text-amber-400 transition-colors">
+                            <a href={INFO.facebook} target="_blank" rel="noopener noreferrer" className="text-white transition-colors hover:text-amber-400">
                                 <GetIcon icon="facebook" className="text-xl" />
                             </a>
                         )}
                         {INFO.linkedin && (
-                            <a href={INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:text-amber-400 transition-colors">
+                            <a href={INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-white transition-colors hover:text-amber-400">
                                 <GetIcon icon="linkedin" className="text-xl" />
                             </a>
                         )}
                         {INFO.github && (
-                            <a href={INFO.github} target="_blank" rel="noopener noreferrer" className="text-white hover:text-amber-400 transition-colors">
+                            <a href={INFO.github} target="_blank" rel="noopener noreferrer" className="text-white transition-colors hover:text-amber-400">
                                 <GetIcon icon="github" className="text-xl" />
                             </a>
                         )}

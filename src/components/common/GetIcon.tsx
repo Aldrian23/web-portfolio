@@ -25,6 +25,18 @@ const GetIcon: FC<{ icon: string; className?: string }> = ({ icon, className }) 
             return <RiGithubFill className={className} />
         case "linkedin":
             return <RiLinkedinFill className={className} />
+        case "experience":
+            return <Briefcase className={className} />
+        case "project":
+            return <Code2 className={className} />
+        case "education":
+            return <Home className={className} />
+        case "blog":
+            return <Home className={className} />
+        case "feedback":
+            return <Home className={className} />
+        case "contact":
+            return <Mail className={className} />
         default: {
             return <></>
         }

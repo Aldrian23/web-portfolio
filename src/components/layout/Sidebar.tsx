@@ -1,10 +1,12 @@
 import { FC } from 'react'
+import { Link, useLocation } from "react-router"
 
 import GetIcon from "@/components/common/GetIcon"
 import { INFO } from "@/data/constants/info.const"
 
 const Sidebar: FC = () => {
     const shows = ['phone', 'location', 'email'] // You can add more to show like email, role, location, etc.
+    const { pathname } = useLocation();
 
     return (
         <div className="hidden lg:flex w-full max-w-full lg:max-w-[300px] bg-neutral-800 border border-neutral-600 rounded-2xl py-5 md:py-7 px-4 md:px-8 flex-col items-center justify-start">
@@ -38,6 +40,16 @@ const Sidebar: FC = () => {
                     </div>
                 ))}
             </div>
+
+            {/* Contact Button */}
+            <Link
+                to="/contact"
+                className={`w-full mt-6 py-2 px-4 text-center rounded-lg transition-colors duration-300 font-title text-sm font-medium flex items-center justify-center gap-2
+                           ${pathname === "/contact" ? "bg-amber-500 text-white" : "bg-neutral-700 text-white hover:bg-amber-500/80"}`}
+            >
+                <GetIcon icon="contact" className="text-current" />
+                Contact Me
+            </Link>
 
             {/* Social Links */}
             <div className="w-full flex justify-center items-center gap-4 mt-4 md:mt-6">
